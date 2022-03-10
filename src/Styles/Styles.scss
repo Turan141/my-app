@@ -1,27 +1,49 @@
-.MainAppDiv{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.MainHeader{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 60%;
-    align-items:flex-start;
+.MainAppDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-
+.MainHeader {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  align-items: flex-start;
+  height: 10rem;
+  margin-top: 1.5rem;
+  padding-bottom: 1.2rem;
+  h1 {
+    font-size: 1.6rem;
+    padding: 1.2rem 0 0 0;
+  }
+  h3 {
+    padding: 1.2rem 0 0 0;
+  }
+  p {
+    padding: 1.2rem 0 0 0;
+  }
+}
 
 .MainMinuteSliderDiv {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  height: 7rem;
+  h2{
+    padding: 5px 0 0 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
 }
 
 .rangeSlider {
@@ -30,17 +52,37 @@
   justify-content: center;
   input {
     width: 60%;
+    background-color: black;
   }
+  input[type='range'] {
+    background-color: black;
+    cursor: pointer;  }
 }
 
 .rangeToShow {
   display: flex;
   width: 78%;
   justify-content: center;
-  line-height: 5%;
+  color:gray;
   p {
     display: flex;
     width: 70%;
     justify-content: space-around;
   }
+}
+
+.MainTotalSum{
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(23, 98, 211);
+}
+
+.selectedType{
+  color:black;
+  font-weight: bold;
 }
