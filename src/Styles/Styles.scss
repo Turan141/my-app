@@ -1,0 +1,46 @@
+.MainAppDiv{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.MainHeader{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    align-items:flex-start;
+}
+
+
+
+.MainMinuteSliderDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rangeSlider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  input {
+    width: 60%;
+  }
+}
+
+.rangeToShow {
+  display: flex;
+  width: 78%;
+  justify-content: center;
+  line-height: 5%;
+  p {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+  }
+}
