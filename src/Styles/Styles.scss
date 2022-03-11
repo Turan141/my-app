@@ -121,17 +121,7 @@
       justify-content: flex-end;
       width: 100%;
       flex-direction: column;
-      .socialIcons {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        img {
-          width: 20%;
-          opacity: 0.3;
-          filter: alpha(opacity=40);
-          border-radius: 50%;
-        }
-      }
+
       .socialPrice {
         flex-direction: row;
         font-size: 1rem;
@@ -140,6 +130,28 @@
         justify-content: center;
       }
     }
+  }
+}
+.socialIconsDeactive {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  img {
+    width: 20%;
+    opacity: 0.3;
+    filter: alpha(opacity=40);
+    border-radius: 50%;
+  }
+}
+.socialIconsActive {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  img {
+    width: 20%;
+    opacity: 1;
+    filter: alpha(opacity=40);
+    border-radius: 50%;
   }
 }
 @media screen and (min-width: 200px) and (max-width: 400px) {
