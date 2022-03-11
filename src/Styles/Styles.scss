@@ -10,20 +10,20 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow-y: hidden;
 }
 
 .MainHeader {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  width: 60%;
+  text-align: center;
+  flex-direction: row;
   align-items: flex-start;
-  height: 10rem;
-  margin-top: 1.5rem;
-  padding-bottom: 1.2rem;
+  height: 7rem;
+  width: 50%;
   h1 {
-    font-size: 1.6rem;
-    padding: 1.2rem 0 0 0;
+    font-size: 1.3rem;
+    padding-top: 2rem;
   }
   h3 {
     padding: 1.2rem 0 0 0;
@@ -38,51 +38,282 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  height: 7rem;
-  h2{
-    padding: 5px 0 0 0;
-    font-size: 0.8rem;
-    font-weight: 500;
-  }
-}
-
-.rangeSlider {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  input {
-    width: 60%;
-    background-color: black;
-  }
-  input[type='range'] {
-    background-color: black;
-    cursor: pointer;  }
-}
-
-.rangeToShow {
-  display: flex;
-  width: 78%;
-  justify-content: center;
-  color:gray;
-  p {
+  .internetText {
+    width: 15rem;
     display: flex;
-    width: 70%;
-    justify-content: space-around;
+    height: 5rem;
+    flex-direction: column;
+    border-right: 2px dotted cyan;
+    h1 {
+      font-size: 1.1rem;
+    }
+    h2 {
+      display: flex;
+      justify-content: center;
+      padding: 5px 0 0 0;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
   }
 }
 
-.MainTotalSum{
+.rangeDiv {
   display: flex;
-  height: 5rem;
+  justify-content: center;
+  width: 70%;
+  flex-direction: column;
+  .rangeSlider {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    input[type='range'] {
+      background-color: black;
+      cursor: pointer;
+      width: 75%;
+      background-color: black;
+    }
+  }
+  .rangeToShow {
+    display: flex;
+    justify-content: space-around;
+    color: gray;
+    width: 97%;
+    margin-left: 1.2rem;
+    p {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.socialMainDiv {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .leftColumn{
+    flex-shrink: 2.67;
+    width: 87%;
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 2px dotted cyan;
+    margin-left: 6%;
+    h1 {
+      font-size: 1.1rem;
+    }
+    h2 {
+      display: flex;
+      justify-content: center;
+      padding: 5px 0 0 0;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  }
+  .socialSecondaryDiv {
+    display: flex;
+    width: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+    .iconMapsDiv {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      flex-direction: column;
+      .socialIcons {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        img {
+          width: 20%;
+          opacity: 0.3;
+          filter: alpha(opacity=40);
+        }
+      }
+      .socialPrice {
+        flex-direction: row;
+        font-size: 1rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 400px) {
+  .MainHeader {
+    height: auto;
+    margin: 0 4rem 2rem 25%;
+  }
+  .rangeDiv {
+    border: none;
+    .rangeToShow {
+      width: 16.5rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .MainMinuteSliderDiv {
+    margin-bottom: 10%;
+    .internetText {
+      border: none;
+    }
+  }
+  .socialMainDiv {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    flex-direction: column;
+    margin-bottom: 10%;
+    .leftColumn{
+      width: 100%;
+      display: flex;
+      height: auto;
+      justify-content: center;
+      flex-direction: column;
+      border-right:none;
+      margin-left: 6%;
+      h1 {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 1.2rem;
+      }
+      h2 {
+        display: flex;
+        justify-content: center;
+        padding: 5px 0 0 0;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+    .socialSecondaryDiv {
+      display: flex;
+      width: 100%;
+      padding-right: 10%;
+      padding-left: 10%;
+      gap: 5%;
+      .iconMapsDiv {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+        color: gray;
+        .socialIcons {
+          display: flex;
+          justify-content: center;
+          margin-top: 30%;
+          img {
+            width: 100%;
+            opacity: 0.3;
+            filter: alpha(opacity=40);
+          }
+        }
+        .socialPrice {
+          font-size: 1rem;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .MainHeader {
+    height: auto;
+    margin: 0 4rem 2rem 20%;
+  }
+  .rangeDiv {
+    border: none;
+    .rangeToShow {
+      width: 18.5rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .MainMinuteSliderDiv {
+    margin-bottom: 10%;
+    .internetText {
+      border: none;
+    }
+  }
+  .socialMainDiv {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    flex-direction: column;
+    margin-bottom: 10%;
+    .leftColumn{
+      width: 90%;
+      display: flex;
+      height: auto;
+      justify-content: center;
+      flex-direction: column;
+      border-right:none;
+      margin-left: 8%;
+      h1 {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 1.2rem;
+      }
+      h2 {
+        display: flex;
+        justify-content: center;
+        padding: 5px 0 0 0;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+    .socialSecondaryDiv {
+      display: flex;
+      width: 100%;
+      padding-right: 10%;
+      padding-left: 10%;
+      gap: 5%;
+      .iconMapsDiv {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+        color: gray;
+        .socialIcons {
+          display: flex;
+          justify-content: center;
+          margin-top: 30%;
+          img {
+            width: 100%;
+            opacity: 0.3;
+            filter: alpha(opacity=40);
+          }
+        }
+        .socialPrice {
+          font-size: 1rem;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.MainTotalSum {
+  display: flex;
+  // height: 5rem;
   align-items: center;
   justify-content: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(23, 98, 211);
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  background-color: rgb(23, 98, 211);
 }
 
-.selectedType{
-  color:black;
+.selectedType {
+  color: black;
   font-weight: bold;
 }
