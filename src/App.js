@@ -6,6 +6,7 @@ import HeaderComponent from './Components/Range-Sliders/Header/Header'
 import SMSSlider from './Components/Range-Sliders/Sliders/SMSSlider'
 import TotalComponent from './Components/Range-Sliders/TotalComponent'
 import SocialApps from './Components/Range-Sliders/SocialAndMessegners/SocialComponent'
+import MessengerComp from './Components/Range-Sliders/SocialAndMessegners/MessengersComponent'
 import ReactDOM from 'react-dom'
 
 import './Styles/Styles.scss'
@@ -33,6 +34,7 @@ function App() {
       <SMSSlider setPayForSMS={setPayForSMS} />
       <TotalComponent totalSum={totalSum} />
       <SocialApps/>
+      <MessengerComp/>
     </div>
   )
 }

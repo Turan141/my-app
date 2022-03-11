@@ -89,6 +89,7 @@
   margin-top: 2%;
   display: flex;
   justify-content: center;
+  margin-bottom: 5%;
   width: 100%;
   .leftColumn{
     flex-shrink: 2.67;
@@ -128,6 +129,7 @@
           width: 20%;
           opacity: 0.3;
           filter: alpha(opacity=40);
+          border-radius: 50%;
         }
       }
       .socialPrice {
@@ -165,7 +167,7 @@
     justify-content: center;
     width: 70%;
     flex-direction: column;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
     .leftColumn{
       width: 100%;
       display: flex;
@@ -246,7 +248,7 @@
     justify-content: center;
     width: 70%;
     flex-direction: column;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
     .leftColumn{
       width: 90%;
       display: flex;
@@ -285,10 +287,12 @@
           display: flex;
           justify-content: center;
           margin-top: 30%;
+          border-radius: 50%;
           img {
             width: 100%;
             opacity: 0.3;
             filter: alpha(opacity=40);
+            border-radius: 50%;
           }
         }
         .socialPrice {
@@ -304,12 +308,12 @@
 
 .MainTotalSum {
   display: flex;
-  // height: 5rem;
+  height: 4rem;
   align-items: center;
   justify-content: center;
   position: fixed;
   bottom: 0;
-  width: 50%;
+  width: 100%;
   background-color: rgb(23, 98, 211);
 }
 
