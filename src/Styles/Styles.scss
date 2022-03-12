@@ -258,65 +258,69 @@
       border: none;
     }
   }
-  .socialMainDiv {
-    margin-top: 2%;
-    display: flex;
-    justify-content: center;
-    width: 70%;
-    flex-direction: column;
-    gap: 5%;
-    .leftColumn {
-      width: 90%;
+  .socialSection {
+    .socialMainDiv {
       display: flex;
-      height: auto;
       justify-content: center;
-      flex-direction: column;
-      border-right: none;
-      margin-left: 8%;
-      h1 {
-        display: flex;
-        justify-content: flex-start;
-        font-size: 1.2rem;
-      }
-      h2 {
-        display: flex;
-        justify-content: center;
-        padding: 5px 0 0 0;
-        font-size: 0.8rem;
-        font-weight: 500;
-      }
-    }
-    .socialSecondaryDiv {
-      display: flex;
       width: 100%;
-      padding-right: 10%;
-      padding-left: 10%;
-      gap: 5%;
-      .iconMapsDiv {
+      flex-wrap: wrap;
+      margin-bottom: 5%;
+      .leftColumn {
+        width: 15rem;
+        display: flex;
+        height: 5rem;
+        flex-direction: column;
+        border-right: none;
+        h1 {
+          font-size: 1.1rem;
+        }
+        h2 {
+          display: flex;
+          justify-content: center;
+          padding: 5px 0 0 0;
+          font-size: 0.8rem;
+          font-weight: 500;
+        }
+      }
+      .socialSecondaryDiv {
         display: flex;
         justify-content: center;
-        width: 100%;
-        flex-direction: column;
-        gap: 5px;
-        color: gray;
-        margin-top: 20px;
-        .socialIcons {
+        width: 70%;
+        padding-left: 0%;
+        padding-right: 0%;
+        flex-direction: row;
+        .iconMapsDiv {
           display: flex;
+          flex-direction: column;
+          align-items: center;
           justify-content: center;
-          margin-top: 30%;
-          border-radius: 50%;
-          img {
-            width: 100%;
-            opacity: 0.3;
-            filter: alpha(opacity=40);
-            border-radius: 50%;
+          .socialIconsDeactive {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 5px;
+            img {
+              width: 100%;
+              opacity: 0.3;
+              filter: alpha(opacity=40);
+              border-radius: 50%;
+            }
           }
-        }
-        .socialPrice {
-          font-size: 1rem;
-          font-weight: bold;
-          display: flex;
-          justify-content: center;
+          .socialIconsActive {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 5px;
+
+            img {
+              width: 100%;
+              opacity: 1;
+              filter: alpha(opacity=40);
+              border-radius: 50%;
+            }
+          }
+          .socialPrice {
+          }
         }
       }
     }
