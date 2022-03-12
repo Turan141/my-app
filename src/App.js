@@ -14,16 +14,20 @@ function App() {
   const [payForTraffic, setPayForTraffic] = useState(0)
   const [payForSMS, setPayForSMS] = useState(0)
   const [payForMinutes, setPayForMinutes] = useState(0)
+  const [payForSocial, setPayForSocial] = useState(0)
+  const [payForMessengers, setPayForMessenger] = useState(0)
   const [icons, setIcons] = useState('')
   const [totalSum, setTotalSum] = useState(
-    payForMinutes + payForSMS + payForTraffic
+    payForMinutes + payForSMS + payForTraffic + payForSocial
   )
 
   useEffect(() => {
     ;(function totalSumHandler() {
-      return setTotalSum(payForMinutes + payForSMS + payForTraffic)
+      return setTotalSum(
+        payForMinutes + payForSMS + payForTraffic + payForSocial
+      )
     })()
-  }, [payForSMS, payForMinutes, payForTraffic])
+  }, [payForSMS, payForMinutes, payForTraffic, payForSocial])
 
   useEffect(() => {
     ;(function getData() {
@@ -41,9 +45,24 @@ function App() {
       <MinuteSlider setPayForMinutes={setPayForMinutes} />
       <TrafficSlider setPayForTraffic={setPayForTraffic} />
       <SMSSlider setPayForSMS={setPayForSMS} />
+      <div className="socialSection">
+        {icons && (
+          <SocialApps
+            type={'Соцсети'}
+            icons={icons.social}
+            setPayForSocial={setPayForSocial}
+          />
+        )}
+        {icons && (
+          <SocialApps
+            type={'Мессенджеры'}
+            icons={icons.messengers}
+            setPayForSocial={setPayForSocial}
+          />
+        )}
+      </div>
+      <div style={{ height: '50px' }} />
       <TotalComponent totalSum={totalSum} />
-      {icons && <SocialApps type={'Соцсети'} icons={icons.social} />}
-      {icons && <SocialApps type={'Мессенджеры'} icons={icons.messengers} />}
     </div>
   )
 }

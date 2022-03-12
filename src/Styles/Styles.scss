@@ -85,35 +85,38 @@
     }
   }
 }
+
+.socialSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .socialMainDiv {
   margin-top: 2%;
   display: flex;
   justify-content: center;
-  margin-bottom: 5%;
-  width: 100%;
-  .leftColumn{
-    flex-shrink: 2.67;
-    width: 87%;
+  margin-bottom: 3%;
+  width: 70%;
+  .leftColumn {
     display: flex;
     height: 5rem;
-    justify-content: center;
     flex-direction: column;
     border-right: 2px dotted cyan;
-    margin-left: 6%;
     h1 {
       font-size: 1.1rem;
     }
     h2 {
-      display: flex;
-      justify-content: center;
-      padding: 5px 0 0 0;
       font-size: 0.8rem;
       font-weight: 500;
     }
   }
   .socialSecondaryDiv {
     display: flex;
-    width: 100%;
+    justify-content: center;
     padding-right: 10%;
     padding-left: 10%;
     .iconMapsDiv {
@@ -137,7 +140,7 @@
   justify-content: center;
   flex-direction: row;
   img {
-    width: 20%;
+    width: 50%;
     opacity: 0.3;
     filter: alpha(opacity=40);
     border-radius: 50%;
@@ -148,13 +151,38 @@
   justify-content: center;
   flex-direction: row;
   img {
-    width: 20%;
+    width: 50%;
     opacity: 1;
     filter: alpha(opacity=40);
     border-radius: 50%;
   }
 }
 @media screen and (min-width: 200px) and (max-width: 400px) {
+  .socialIconsDeactive {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50%;
+
+    img {
+      width: 90%;
+      opacity: 0.3;
+      filter: alpha(opacity=40);
+      border-radius: 50%;
+    }
+  }
+  .socialIconsActive {
+    margin-top: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    img {
+      width: 90%;
+      opacity: 1;
+      filter: alpha(opacity=40);
+      border-radius: 50%;
+    }
+  }
   .MainHeader {
     height: auto;
     margin: 0 4rem 2rem 25%;
@@ -179,14 +207,15 @@
     justify-content: center;
     width: 70%;
     flex-direction: column;
-    margin-bottom: 20%;
-    .leftColumn{
+    row-gap: 10%;
+
+    .leftColumn {
       width: 100%;
       display: flex;
       height: auto;
       justify-content: center;
       flex-direction: column;
-      border-right:none;
+      border-right: none;
       margin-left: 6%;
       h1 {
         display: flex;
@@ -214,18 +243,9 @@
         flex-direction: column;
         gap: 5px;
         color: gray;
-        .socialIcons {
-          display: flex;
-          justify-content: center;
-          margin-top: 30%;
-          img {
-            width: 100%;
-            opacity: 0.3;
-            filter: alpha(opacity=40);
-          }
-        }
+
         .socialPrice {
-          font-size: 1rem;
+          font-size: 100%;
           font-weight: bold;
           display: flex;
           justify-content: center;
@@ -260,14 +280,14 @@
     justify-content: center;
     width: 70%;
     flex-direction: column;
-    margin-bottom: 20%;
-    .leftColumn{
+    gap: 5%;
+    .leftColumn {
       width: 90%;
       display: flex;
       height: auto;
       justify-content: center;
       flex-direction: column;
-      border-right:none;
+      border-right: none;
       margin-left: 8%;
       h1 {
         display: flex;
@@ -295,6 +315,7 @@
         flex-direction: column;
         gap: 5px;
         color: gray;
+        margin-top: 20px;
         .socialIcons {
           display: flex;
           justify-content: center;
@@ -327,6 +348,7 @@
   bottom: 0;
   width: 100%;
   background-color: rgb(23, 98, 211);
+  color: white;
 }
 
 .selectedType {
