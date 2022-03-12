@@ -1,5 +1,5 @@
 import '../../../Styles/Styles.scss'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const SocialApps = ({ type, icons, setPayForSocial }) => {
   const [social, setSocial] = useState({

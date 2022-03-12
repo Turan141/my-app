@@ -15,7 +15,6 @@ function App() {
   const [payForSMS, setPayForSMS] = useState(0)
   const [payForMinutes, setPayForMinutes] = useState(0)
   const [payForSocial, setPayForSocial] = useState(0)
-  const [payForMessengers, setPayForMessenger] = useState(0)
   const [icons, setIcons] = useState('')
   const [totalSum, setTotalSum] = useState(
     payForMinutes + payForSMS + payForTraffic + payForSocial

@@ -87,102 +87,71 @@
 }
 
 .socialSection {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.socialMainDiv {
-  margin-top: 2%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3%;
-  width: 70%;
-  .leftColumn {
-    display: flex;
-    height: 5rem;
-    flex-direction: column;
-    border-right: 2px dotted cyan;
-    h1 {
-      font-size: 1.1rem;
-    }
-    h2 {
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-  }
-  .socialSecondaryDiv {
+  .socialMainDiv {
     display: flex;
     justify-content: center;
-    padding-right: 10%;
-    padding-left: 10%;
-    .iconMapsDiv {
+    width: 100%;
+    flex-wrap: wrap;
+    .leftColumn {
+      width: 15rem;
       display: flex;
-      justify-content: flex-end;
-      width: 100%;
+      height: 5rem;
       flex-direction: column;
-
-      .socialPrice {
-        flex-direction: row;
-        font-size: 1rem;
-        font-weight: bold;
+      border-right: 2px dotted cyan;
+      h1 {
+        font-size: 1.1rem;
+      }
+      h2 {
         display: flex;
         justify-content: center;
+        padding: 5px 0 0 0;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+    .socialSecondaryDiv {
+      display: flex;
+      justify-content: center;
+      width: 70%;
+      padding-left: 3%;
+      padding-right: 3%;
+      flex-direction: row;
+      .iconMapsDiv {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .socialIconsDeactive {
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          img {
+            width: 25%;
+            opacity: 0.3;
+            filter: alpha(opacity=40);
+            border-radius: 50%;
+          }
+        }
+        .socialIconsActive {
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          img {
+            width: 25%;
+            opacity: 1;
+            filter: alpha(opacity=40);
+            border-radius: 50%;
+          }
+        }
+        .socialPrice {
+        }
       }
     }
   }
 }
-.socialIconsDeactive {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  img {
-    width: 50%;
-    opacity: 0.3;
-    filter: alpha(opacity=40);
-    border-radius: 50%;
-  }
-}
-.socialIconsActive {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  img {
-    width: 50%;
-    opacity: 1;
-    filter: alpha(opacity=40);
-    border-radius: 50%;
-  }
-}
-@media screen and (min-width: 200px) and (max-width: 400px) {
-  .socialIconsDeactive {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 50%;
 
-    img {
-      width: 90%;
-      opacity: 0.3;
-      filter: alpha(opacity=40);
-      border-radius: 50%;
-    }
-  }
-  .socialIconsActive {
-    margin-top: 50%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    img {
-      width: 90%;
-      opacity: 1;
-      filter: alpha(opacity=40);
-      border-radius: 50%;
-    }
-  }
+@media screen and (min-width: 200px) and (max-width: 400px) {
   .MainHeader {
     height: auto;
     margin: 0 4rem 2rem 25%;
@@ -201,54 +170,69 @@
       border: none;
     }
   }
-  .socialMainDiv {
-    margin-top: 2%;
-    display: flex;
-    justify-content: center;
-    width: 70%;
-    flex-direction: column;
-    row-gap: 10%;
-
-    .leftColumn {
-      width: 100%;
+  .socialSection {
+    .socialMainDiv {
       display: flex;
-      height: auto;
       justify-content: center;
-      flex-direction: column;
-      border-right: none;
-      margin-left: 6%;
-      h1 {
-        display: flex;
-        justify-content: flex-start;
-        font-size: 1.2rem;
-      }
-      h2 {
-        display: flex;
-        justify-content: center;
-        padding: 5px 0 0 0;
-        font-size: 0.8rem;
-        font-weight: 500;
-      }
-    }
-    .socialSecondaryDiv {
-      display: flex;
       width: 100%;
-      padding-right: 10%;
-      padding-left: 10%;
-      gap: 5%;
-      .iconMapsDiv {
+      flex-wrap: wrap;
+      margin-bottom: 5%;
+      .leftColumn {
+        width: 15rem;
         display: flex;
-        justify-content: center;
-        width: 100%;
+        height: 5rem;
         flex-direction: column;
-        gap: 5px;
-        color: gray;
-
-        .socialPrice {
-          font-size: 100%;
-          font-weight: bold;
+        border-right: none;
+        h1 {
+          font-size: 1.1rem;
+        }
+        h2 {
           display: flex;
           justify-content: center;
+          padding: 5px 0 0 0;
+          font-size: 0.8rem;
+          font-weight: 500;
+        }
+      }
+      .socialSecondaryDiv {
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        padding-left: 0%;
+        padding-right: 0%;
+        flex-direction: row;
+        .iconMapsDiv {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .socialIconsDeactive {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 5px;
+            img {
+              width: 100%;
+              opacity: 0.3;
+              filter: alpha(opacity=40);
+              border-radius: 50%;
+            }
+          }
+          .socialIconsActive {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 5px;
+
+            img {
+              width: 100%;
+              opacity: 1;
+              filter: alpha(opacity=40);
+              border-radius: 50%;
+            }
+          }
+          .socialPrice {
+          }
         }
       }
     }
